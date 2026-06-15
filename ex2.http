@@ -1,0 +1,33 @@
+{
+  "predicates": [
+    {
+      "equals": {
+        "method": "GET",
+        "path": "/api/cars",
+        "query": {
+          "brand": "Toyota"
+        }
+      }
+    }
+  ],
+  "responses": [
+    {
+      "is": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "brand": "Toyota",
+          "results": [
+            {
+              "id": 1,
+              "modelo": "Corolla",
+              "preco": 25000
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
