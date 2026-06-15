@@ -1,16 +1,24 @@
 POST http://localhost:2525/imposters
 Content-Type: application/json
 
+
 {
-  "port": 4547,
+  "port": 4548,
   "protocol": "http",
   "stubs": [
     {
       "predicates": [
         {
-          "equals": {
-            "method": "GET",
-            "path": "/api/cars"
+          "deepEquals": {
+            "method": "POST",
+            "path": "/api/login",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": {
+              "username": "admin",
+              "password": "secret"
+            }
           }
         }
       ],
@@ -22,7 +30,8 @@ Content-Type: application/json
               "Content-Type": "application/json"
             },
             "body": {
-              "results": []
+              "status": "ok",
+              "token": "validtoken"
             }
           }
         }
