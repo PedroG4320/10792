@@ -1,0 +1,50 @@
+{
+	"info": {
+		"name": "API test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Login JWT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7064/api/auth/login",
+					"protocol": "https",
+					"host": ["localhost"],
+					"port": "7064",
+					"path": ["api", "auth", "login"]
+				}
+			}
+		},
+		{
+			"name": "2. Get Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7064/api/products",
+					"protocol": "https",
+					"host": ["localhost"],
+					"port": "7064",
+					"path": ["api", "products"]
+				}
+			}
+		},
+		{
+			"name": "3. Check Stock (Polly)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7064/api/products/SKU123/stock",
+					"protocol": "https",
+					"host": ["localhost"],
+					"port": "7064",
+					"path": ["api", "products", "SKU123", "stock"]
+				}
+			}
+		}
+	]
+}
